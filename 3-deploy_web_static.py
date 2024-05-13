@@ -38,7 +38,7 @@ def do_deploy(archive_path):
         sudo(f"rm -rf {remote_path}/web_static")
         sudo(f"rm /tmp/{archive_name}")
         sudo(f"rm -rf /data/web_static/current")
-        sudo(f"ln -s /data/web_static/current {remote_path}")
+        sudo(f"ln -s {remote_path} /data/web_static/current")
         return True
     except:
         return False
