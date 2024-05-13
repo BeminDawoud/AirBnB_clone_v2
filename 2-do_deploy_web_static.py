@@ -4,8 +4,6 @@ distributes an archive to your web servers
 """
 from fabric.api import *
 from os.path import exists
-
-
 env.hosts = ['18.204.3.147', '3.84.158.72']
 
 
