@@ -48,7 +48,7 @@ def deploy():
     """
     creates and distributes an archive to your web servers
     """
-    f_path = dopack()
+    f_path = do_pack()
     if f_path is None:
         return False
     return do_deploy(f_path)
