@@ -32,13 +32,13 @@ def do_deploy(archive_path):
         archive_name = archive_path.split("/")[-1]
         folder_name = archive_name.split(".")[0]
         remote_path = f"/data/web_static/releases/{folder_name}"
-        sudo(f"mkdir -p {remote_path}")
-        sudo(f"tar -xzf /tmp/{archive_name} -C {remote_path}")
-        sudo(f"mv {remote_path}/web_static/* {remote_path}")
-        sudo(f"rm -rf {remote_path}/web_static")
-        sudo(f"rm /tmp/{archive_name}")
-        sudo(f"rm -rf /data/web_static/current")
-        sudo(f"ln -s {remote_path} /data/web_static/current")
+        run(f"sudo mkdir -p {remote_path}")
+        run(f"sudo tar -xzf /tmp/{archive_name} -C {remote_path}")
+        run(f"sudo mv {remote_path}/web_static/* {remote_path}")
+        run(f"sudo rm -rf {remote_path}/web_static")
+        run(f"sudo rm /tmp/{archive_name}")
+        run(f"sudo rm -rf /data/web_static/current")
+        run(f"sudo ln -s {remote_path} /data/web_static/current")
         return True
     except:
         return False
