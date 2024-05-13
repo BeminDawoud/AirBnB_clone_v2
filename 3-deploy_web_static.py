@@ -52,4 +52,3 @@ def deploy():
     if f_path is None:
         return False
     return do_deploy(f_path)
-
