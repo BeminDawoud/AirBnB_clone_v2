@@ -16,7 +16,7 @@ def do_pack():
     try:
         time = datetime.now().strftime("%Y%m%d%H%M%S")
         local("mkdir -p versions")
-        archive_path = f"versions/web_static{time}.tgz"
+        archive_path = f"versions/web_static_{time}.tgz"
         local(f"tar -czvf {archive_path} web_static")
         return archive_path
     except:
@@ -25,7 +25,7 @@ def do_pack():
 
 def do_deploy(archive_path):
     """distributes an archive to your web servers"""
-    if(exists(archive_path) is False):
+    if exists(archive_path) is False:
         return False
     try:
         put(f"{archive_path}", "/tmp/")
