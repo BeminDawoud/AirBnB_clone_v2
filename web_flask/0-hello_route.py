@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This is to run a minimal app using flask    
+This is to run a minimal app using flask
 """
 
 from flask import Flask
