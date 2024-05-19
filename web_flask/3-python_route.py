@@ -26,7 +26,7 @@ def c_is_cool(text):
 
 
 @app.route('/python/<text>', strict_slashes=False)
-def python_is_cool(text='is cool'):
+def python_is_cool(text="is cool"):
     '''Second route'''
     return f"Python {text.replace('_', ' ')}"
 
