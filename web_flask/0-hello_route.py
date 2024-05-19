@@ -4,9 +4,9 @@ This is to run a minimal app using flask
 """
 
 from flask import Flask
-
-
 app = Flask(__name__)
+
+
 @app.route('/', strict_slashes=False)
 def hello():
     '''First flask app'''
