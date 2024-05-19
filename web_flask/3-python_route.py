@@ -21,13 +21,14 @@ def hbnb():
 
 @app.route('/c/<text>', strict_slashes=False)
 def c_is_cool(text):
-    '''Second route'''
+    '''c is cool'''
     return f"C {text.replace('_', ' ')}"
 
 
+@app.route('/python/', strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
 def python_is_cool(text="is cool"):
-    '''Second route'''
+    '''python is cool'''
     return f"Python {text.replace('_', ' ')}"
 
 
