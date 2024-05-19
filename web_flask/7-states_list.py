@@ -18,7 +18,7 @@ def Print_states():
 def Close_Storage(exception):
     """ will be executed after each request to close storage"""
     storage.close()
-    
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
